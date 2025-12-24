@@ -8,7 +8,8 @@ A simple Ashita v4 addon that shows a centered, scrollable list of your account 
 Requires autologin (shipped with Ashita) loaded.
 
 ## Commands
-- `/switchcharacter` | `/sw` — toggle the UI
+- `/switchcharacter [optional: index]` | `/sw [optional: index]` — toggle the UI
 
 Add the character index to the command to switch character without using the UI. (0-15)
+
 

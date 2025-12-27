@@ -155,6 +155,10 @@ ashita.events.register('command', 'command_cb', function(cmd, nType)
 end)
 
 ashita.events.register('load', 'load_cb', function()
+    if not GetPlayerEntity() then
+        return
+    end
+
     loadCharacters()
 end)
 

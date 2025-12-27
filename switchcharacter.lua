@@ -76,6 +76,8 @@ local function drawUI()
         local maxListHeight = maxWindowHeight - closeButtonHeight - 30
         local listHeight = math.min(maxListHeight, math.max(70, totalButtonsHeight))
 
+        local player = GetPlayerEntity()
+
         if imgui.BeginChild('CharList', { -1, listHeight }, ImGuiChildFlags_None, ImGuiWindowFlags_NoBackground) then
             imgui.PushStyleVar(ImGuiStyleVar_CellPadding, { 0, 0 })
             imgui.PushStyleColor(ImGuiCol_Header, { 0.1, 0.1, 0.1, 0.8 })
@@ -92,7 +94,9 @@ local function drawUI()
 
                 imgui.SameLine(8)
                 imgui.BeginGroup()
-                imgui.PushStyleColor(ImGuiCol_Text, { 1.0, 1.0, 1.0, 1.0 })
+                local isCurrent = (player and player.Name == character.name)
+                local color = isCurrent and { 0.2, 0.8, 0.2, 1.0 } or { 1.0, 1.0, 1.0, 1.0 }
+                imgui.PushStyleColor(ImGuiCol_Text, color)
                 imgui.Text(character.name)
                 imgui.PopStyleColor(1)
                 imgui.SameLine()

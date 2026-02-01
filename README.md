@@ -16,10 +16,11 @@
 - Switch to another character directly from the UI
 - Requires **autologin** (shipped with Ashita) to be loaded
 
-## Commands
+# Commands
 - `/switchcharacter [optional: index]` | `/sw [optional: index]` — toggle the UI | switch to character if index is provided.
 
 Add the character index to the command to switch character without using the UI. (0-15)
+
 
 
 

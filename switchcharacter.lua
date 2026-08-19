@@ -31,15 +31,17 @@ local function loadCharacters()
         local days = math.floor(playtime / 86400)
         local hours = math.floor((playtime % 86400) / 3600)
 
-        table.insert(characters, {
-            id = id,
-            name = name,
-            world = world or 'Unknown',
-            job = job,
-            level = level,
-            zone = zone,
-            playtime_str = string.format('%dd %dh', days, hours)
-        })
+        if #name >= 3 then
+            table.insert(characters, {
+                id = id,
+                name = name,
+                world = world or 'Unknown',
+                job = job,
+                level = level,
+                zone = zone,
+                playtime_str = string.format('%dd %dh', days, hours)
+            })
+        end
     end
 end
 

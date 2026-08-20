@@ -31,7 +31,7 @@ local function loadCharacters()
         local days = math.floor(playtime / 86400)
         local hours = math.floor((playtime % 86400) / 3600)
 
-        if #name >= 3 then
+        if #name >= 1 then
             table.insert(characters, {
                 id = id,
                 name = name,
